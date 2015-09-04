@@ -1,0 +1,5 @@
+{
+    "require": {
+        "dnaber/requisite": "~0.9"
+    }
+}
