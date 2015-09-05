@@ -1,5 +1,4 @@
 <?php
-
 /**
  * We all Humans!
  *
@@ -9,22 +8,12 @@
  * @subpackage man
  */
 
-#Require sanitariness interface
-#require_once( dirname( __FILE__ ) . '/Sanitariness.php' );
-#require_once( dirname( __FILE__ ) . '/Clothes.php' );
-
-class Man implements Sanitariness, Clothes {
+class Man implements HumanBuilder {
 
 	private $typeof = False;
 
 
-	public function __construct(){
-
-		#Require variations of a man
-		#require_once( dirname( __FILE__ ) . '/Dreamlover.php' );
-		#require_once( dirname( __FILE__ ) . '/Hipster.php' );
-
-	}
+	public function __construct(){}
 
 	/**
 	 * Set a type of man
@@ -32,10 +21,10 @@ class Man implements Sanitariness, Clothes {
 	 * @param string $type set a type of man
 	 * @return string
 	 */
-	private function setTyp( $type ){
+	public function setTyp( $type ){
 
 		$types = array(
-			  				'dreamlover' => new DreamLover(),
+			  				'dreamlover' => new DreamLover,
 							'hipster' => new Hipster()
 						);
 
@@ -52,15 +41,13 @@ class Man implements Sanitariness, Clothes {
 	 */
 	public function get( $type ){
 
-		return $this->setTyp( $type );
+		$typeof = $this->setTyp( $type );
+
+		return $typeof;
 
 	}
 
+
 }
 
-
-#$Man = new Man;
-#$myMan = $Man->get( 'dreamlover' );
-#
-#print_r( $myMan );
 

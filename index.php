@@ -11,3 +11,6 @@ $loader->addRule(
 );
 
 $man = new Man;
+$myMan = $man->get( 'dreamlover' );
+
+print_r( $myMan );

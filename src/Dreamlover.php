@@ -20,8 +20,8 @@ class DreamLover extends Man {
 	private function bulid(){
 
 		$this->shower 			= self::shower( 7, '2 Times per day');
-		$this->shave 			= self::shower( 7, 'Every day');
-		$this->brushing_teeth 	= self::shower( 7 );
+		$this->shave 			= self::shave( 7, 'Every day');
+		$this->brushing_teeth 	= self::brushing_teeth( 7 );
 
 	}
 
@@ -31,6 +31,7 @@ class DreamLover extends Man {
 	 * @see interface Sanitariness
 	 * @param int
 	 * @param string
+	 * @return void
 	 */
 	private function shower( $int, $string ){
 
@@ -39,7 +40,7 @@ class DreamLover extends Man {
 						5 => 'sometimes'
 					);
 
-		print_r($shower);
+		print_r('$shower');
 
 		#return $shower[ $int ] $string;
 
@@ -50,6 +51,7 @@ class DreamLover extends Man {
 	 *
 	 * @see interface Sanitariness
 	 * @param int
+	 * @return void
 	 */
 	private function shave( $int, $string ){
 
@@ -67,6 +69,7 @@ class DreamLover extends Man {
 	 *
 	 * @see interface Sanitariness
 	 * @param int
+	 * @return void
 	 */
 	private function brushing_teeth( $int ){
 
