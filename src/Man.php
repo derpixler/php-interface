@@ -24,7 +24,7 @@ class Man implements HumanBuilder {
 	public function setTyp( $type ){
 
 		$types = array(
-			  				'dreamlover' => new DreamLover,
+			  				'dreamlover' => new DreamLover(),
 							'hipster' => new Hipster()
 						);
 
